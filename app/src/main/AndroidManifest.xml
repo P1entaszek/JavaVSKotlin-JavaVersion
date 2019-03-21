@@ -18,7 +18,7 @@
         </activity>
         <activity android:name=".GraphicTestActivity" />
         <activity android:name=".ThreadTestActivity" />
-        <activity android:name=".ProcessorTestActivity"></activity>
+        <activity android:name=".AboutApp"></activity>
     </application>
 
 </manifest>

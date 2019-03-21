@@ -8,9 +8,9 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    Button graphicTest;
-    Button threadTest;
-    Button processorTest;
+    private Button graphicTest;
+    private Button threadTest;
+    private Button aboutApp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,34 +18,25 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         graphicTest = findViewById(R.id.bttnGraphicTransformations);
         threadTest = findViewById(R.id.bttnThreadTest);
-        processorTest = findViewById(R.id.bttnProcessorOperations);
+        aboutApp = findViewById(R.id.bttnProcessorOperations);
         registerListeners();
     }
 
     private void registerListeners() {
-        graphicTest.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "graphic", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(MainActivity.this, GraphicTestActivity.class);
-                startActivity(intent);
-            }
+        graphicTest.setOnClickListener(v -> {
+            Toast.makeText(MainActivity.this, "graphic", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(MainActivity.this, GraphicTestActivity.class);
+            startActivity(intent);
         });
-        threadTest.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "thread", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(MainActivity.this, ThreadTestActivity.class);
-                startActivity(intent);
-            }
+        threadTest.setOnClickListener(v -> {
+            Toast.makeText(MainActivity.this, "thread", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(MainActivity.this, ThreadTestActivity.class);
+            startActivity(intent);
         });
-        processorTest.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "processor", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(MainActivity.this, ProcessorTestActivity.class);
-                startActivity(intent);
-            }
+        aboutApp.setOnClickListener(v -> {
+            Toast.makeText(MainActivity.this, "processor", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(MainActivity.this, AboutApp.class);
+            startActivity(intent);
         });
     }
 
