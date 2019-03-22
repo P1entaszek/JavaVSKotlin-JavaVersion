@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">JavaVSKotlin-JavaVersion</string>
+    <string-array name="transformations_mode">
+        <item>Transformations</item>
+        <item>Inverse mode</item>
+        <item>Negative mode</item>
+    </string-array>
+    <string-array name="thread_mode">
+        <item>Thread mode</item>
+        <item>Single thread mode</item>
+        <item>Multi thread mode</item>
+    </string-array>
 </resources>
