@@ -6,7 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".ThreadTestActivity">
 
+
     <LinearLayout
+        android:id="@+id/allRows"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -23,9 +25,9 @@
             tools:layout_editor_absoluteY="103dp">
 
             <LinearLayout
-                android:id="@+id/firstImgRow"
+                android:id="@+id/imgFirstRow"
                 android:layout_width="match_parent"
-                android:layout_height="115dp"
+                android:layout_height="190dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_weight="1"
@@ -49,12 +51,6 @@
                     android:contentDescription="TODO"
                     app:srcCompat="@drawable/second" />
 
-                <ImageView
-                    android:id="@+id/imgThirdPhoto"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/third" />
             </LinearLayout>
 
             <LinearLayout
@@ -69,7 +65,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="First Thread" />
+                    android:text="First photo" />
 
                 <TextView
                     android:id="@+id/tvSecondPhoto"
@@ -77,29 +73,31 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Second Thread" />
+                    android:text="Second photo" />
 
-                <TextView
-                    android:id="@+id/tvThirdPhoto"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="Third Thread" />
             </LinearLayout>
 
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/secondRow"
+            android:id="@+id/imgSecondRow"
             android:layout_width="match_parent"
-            android:layout_height="115dp"
+            android:layout_height="190dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="83dp">
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="373dp">
+
+            <ImageView
+                android:id="@+id/imgThirdPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/third" />
 
             <ImageView
                 android:id="@+id/imgFourthPhoto"
@@ -108,19 +106,6 @@
                 android:layout_weight="1"
                 app:srcCompat="@drawable/fourth" />
 
-            <ImageView
-                android:id="@+id/imgFifthPhoto"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/fifth" />
-
-            <ImageView
-                android:id="@+id/imgSixthPhoto"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/sixth" />
         </LinearLayout>
 
         <LinearLayout
@@ -130,30 +115,21 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/tvThirdPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Third photo" />
+
+            <TextView
                 android:id="@+id/tvFourthPhoto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="Fourth Thread" />
-
-            <TextView
-                android:id="@+id/tvFifthPhoto"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Fifth Thread" />
-
-            <TextView
-                android:id="@+id/tvSixthPhoto"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Sixth Thread" />
+                android:text="Fourth photo" />
         </LinearLayout>
-
     </LinearLayout>
 
     <Button
@@ -188,5 +164,19 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/spinnerTransformationMode"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvAllThreadTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:text="All/Average  time consumed"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/allRows" />
+
 
 </android.support.constraint.ConstraintLayout>
