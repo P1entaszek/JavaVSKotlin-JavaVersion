@@ -7,22 +7,51 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="60dp"
+        android:id="@+id/logo_layout"
+        android:layout_width="0dp"
+        android:layout_height="228dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="132dp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <ImageView
+            android:id="@+id/imgLogoJava"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/java_logo" />
+
+        <ImageView
+            android:id="@+id/imgLogoKotlin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/kotlin_logo" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo_layout">
+
         <Button
-            android:id="@+id/bttnGraphicTransformations"
+            android:id="@+id/memoryTest"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Graphic Transformations Test"
+            android:text="Memory Test"
             android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse" />
 
         <Button
@@ -33,10 +62,11 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse" />
 
         <Button
-            android:id="@+id/bttnProcessorOperations"
+            android:id="@+id/bttnAboutApp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Processor Operations Test"
+            android:text="About Application"
             android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse" />
     </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>

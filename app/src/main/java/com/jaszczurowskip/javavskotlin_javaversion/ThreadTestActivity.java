@@ -41,8 +41,6 @@ public class ThreadTestActivity extends AppCompatActivity {
         setContentView(R.layout.activity_thread_test);
         connectView();
         registerButtons();
-        setupSpinner(spinnerTransdormationMode, R.array.transformations_mode);
-        setupSpinner(spinnerThreadMode, R.array.thread_mode);
     }
 
     private void connectView() {
@@ -58,11 +56,12 @@ public class ThreadTestActivity extends AppCompatActivity {
         tvAllThreadTime = findViewById(R.id.tvAllThreadTime);
         spinnerTransdormationMode = findViewById(R.id.spinnerTransformationMode);
         spinnerThreadMode = findViewById(R.id.spinnerThreadMode);
+        setupSpinner(spinnerTransdormationMode, R.array.transformations_mode);
+        setupSpinner(spinnerThreadMode, R.array.thread_mode);
         textViewsList.add(tvFirstThread);
         textViewsList.add(tvSecondThread);
         textViewsList.add(tvThirdThread);
         textViewsList.add(tvFourthThread);
-        tvAllThreadTime = findViewById(R.id.tvAllThreadTime);
         imageViewsList.add(imgFirstPhoto);
         imageViewsList.add(imgSecondPhoto);
         imageViewsList.add(imgThirdPhoto);
