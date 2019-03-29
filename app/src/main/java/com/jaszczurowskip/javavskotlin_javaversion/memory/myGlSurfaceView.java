@@ -24,7 +24,8 @@ public class myGlSurfaceView extends GLSurfaceView {
     public void setupView() {
         super.setEGLConfigChooser(8, 8, 8, 8, 16, 0);
         // Set the Renderer for drawing on the GLSurfaceView
-        this.myRender = new BouncyCubeRenderer(true);
+        this.myRender = new BouncyCubeRenderer();
+        myRender.setCubesCount(100);
         setRenderer(myRender);
         // Render the view only when there is a change in the drawing data
         setRenderMode(GLSurfaceView.RENDERMODE_CONTINUOUSLY);
