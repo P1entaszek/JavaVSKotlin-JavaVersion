@@ -17,7 +17,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GraphicTestActivity" />
+        <activity android:name=".memory.GraphicTestActivity" />
         <activity android:name=".ThreadTestActivity" />
         <activity android:name=".AboutApp"></activity>
     </application>
