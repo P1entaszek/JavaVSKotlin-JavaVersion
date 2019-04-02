@@ -1,8 +1,5 @@
 package com.jaszczurowskip.javavskotlin_javaversion.memory;
 
-import android.opengl.GLES30;
-import android.util.Log;
-
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.FloatBuffer;

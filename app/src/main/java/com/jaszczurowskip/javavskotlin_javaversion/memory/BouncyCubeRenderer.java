@@ -13,17 +13,18 @@ import javax.microedition.khronos.opengles.GL11;
 class BouncyCubeRenderer implements GLSurfaceView.Renderer {
 
     public static final float OBJ_SCALE = 0.3f;
-    float rowSize = 10;
+    private float rowSize = 10;
     private Cube mCube;
     private float mAngle;
-    int cubesCount;
-    long lastFrameTime;
+    private int cubesCount;
+    private long lastFrameTime;
     float fps;
     private int width;
     private int height;
 
     public void setCubesCount(int cubesCount) {
         this.cubesCount = cubesCount;
+
     }
 
     public BouncyCubeRenderer() {
@@ -89,8 +90,7 @@ class BouncyCubeRenderer implements GLSurfaceView.Renderer {
     @Override
     public void onSurfaceCreated(GL10 gl, EGLConfig config) {
         gl.glDisable(GL11.GL_DITHER);
-        gl.glHint(GL11.GL_PERSPECTIVE_CORRECTION_HINT,
-                GL11.GL_FASTEST);
+        gl.glHint(GL11.GL_PERSPECTIVE_CORRECTION_HINT, GL11.GL_FASTEST);
         gl.glClearColor(1, 1, 1, 1);
         gl.glEnable(GL11.GL_CULL_FACE);
         gl.glShadeModel(GL11.GL_SMOOTH);

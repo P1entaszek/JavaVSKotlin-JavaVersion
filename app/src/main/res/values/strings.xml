@@ -12,7 +12,7 @@
         <item>Negative</item>
     </string-array>
     <string-array name="thread_mode">
-        <item>Thread mode</item>
+        <item>Choose thread mode</item>
         <item>Single thread</item>
         <item>Multi thread</item>
     </string-array>

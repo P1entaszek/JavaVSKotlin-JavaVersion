@@ -25,12 +25,6 @@
             android:layout_weight="1"
             app:srcCompat="@drawable/java_logo" />
 
-        <ImageView
-            android:id="@+id/imgLogoKotlin"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/kotlin_logo" />
     </LinearLayout>
 
     <LinearLayout
@@ -51,7 +45,7 @@
             android:id="@+id/memoryTest"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Memory Test"
+            android:text="FPS Test"
             android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse" />
 
         <Button

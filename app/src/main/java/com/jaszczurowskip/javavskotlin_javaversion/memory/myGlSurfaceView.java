@@ -4,7 +4,6 @@ import android.content.Context;
 import android.opengl.GLSurfaceView;
 import android.util.AttributeSet;
 
-
 /**
  * Created by jaszczurowskip on 29.03.2019
  */
@@ -23,13 +22,13 @@ public class myGlSurfaceView extends GLSurfaceView {
 
     public void setupView() {
         super.setEGLConfigChooser(8, 8, 8, 8, 16, 0);
-        // Set the Renderer for drawing on the GLSurfaceView
         this.myRender = new BouncyCubeRenderer();
         myRender.setCubesCount(100);
         setRenderer(myRender);
-        // Render the view only when there is a change in the drawing data
         setRenderMode(GLSurfaceView.RENDERMODE_CONTINUOUSLY);
     }
 
-
+    public float getFramerate(){
+        return myRender.fps;
+    }
 }
