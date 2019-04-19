@@ -28,7 +28,7 @@ public class myGlSurfaceView extends GLSurfaceView {
         setRenderMode(GLSurfaceView.RENDERMODE_CONTINUOUSLY);
     }
 
-    public float getFramerate(){
-        return myRender.fps;
+    public String getFramerate(){
+        return myRender.getLastFramerate();
     }
 }

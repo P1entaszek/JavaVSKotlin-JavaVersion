@@ -16,8 +16,8 @@ public class GraphicTestActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_graphic_test);
         myGlView = findViewById(R.id.glView);
-        tvFPS = findViewById(R.id.tvFpsPerformance);
+        tvFPS = findViewById(R.id.tvFps);
         myGlView.setupView();
-        tvFPS.setText("FPS/sec: 66.3");
+        tvFPS.setText("66.3");
     }
 }

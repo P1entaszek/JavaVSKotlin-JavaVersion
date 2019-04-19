@@ -67,6 +67,10 @@ class BouncyCubeRenderer implements GLSurfaceView.Renderer {
         Log.e("fps", "" + fps);
     }
 
+    public String getLastFramerate(){
+        return String.valueOf(fps);
+    }
+
     public void onSurfaceChanged(GL10 gl, int width, int height) {
         this.width = width;
         this.height = height;
