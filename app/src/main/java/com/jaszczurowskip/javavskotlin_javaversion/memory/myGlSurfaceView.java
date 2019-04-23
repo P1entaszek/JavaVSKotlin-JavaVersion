@@ -28,6 +28,13 @@ public class myGlSurfaceView extends GLSurfaceView {
         setRenderMode(GLSurfaceView.RENDERMODE_CONTINUOUSLY);
     }
 
+    public void changeAmountOfCubes(int value){
+        // nie dziala
+        myRender.setCubesCount(value);
+        setRenderer(myRender);
+        setRenderMode(GLSurfaceView.RENDERMODE_CONTINUOUSLY);
+    }
+
     public String getFramerate(){
         return myRender.getLastFramerate();
     }

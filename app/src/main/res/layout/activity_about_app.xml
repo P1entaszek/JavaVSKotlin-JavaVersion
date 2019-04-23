@@ -12,5 +12,6 @@
         android:layout_height="wrap_content"
         android:text="Made By PJ"
         tools:layout_editor_absoluteX="163dp"
-        tools:layout_editor_absoluteY="286dp" />
+        tools:layout_editor_absoluteY="286dp"
+        tools:ignore="MissingConstraints" />
 </android.support.constraint.ConstraintLayout>

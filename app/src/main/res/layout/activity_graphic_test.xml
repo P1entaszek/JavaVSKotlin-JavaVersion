@@ -49,8 +49,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:snp_maxValue="1000"
-            app:snp_minValue="5"
+            app:snp_minValue="10"
             app:snp_stepSize="5"
+            app:snp_value="100"
             app:snp_value_text_color="@color/colorPrimary"
             app:snp_value_text_size="20sp"
             android:layout_weight="1" />
@@ -59,6 +60,12 @@
             android:id="@+id/npRotateSpeed"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            app:snp_maxValue="1000"
+            app:snp_minValue="10"
+            app:snp_stepSize="5"
+            app:snp_value="100"
+            app:snp_value_text_color="@color/colorPrimary"
+            app:snp_value_text_size="20sp"
             android:layout_weight="1" />
 
 
