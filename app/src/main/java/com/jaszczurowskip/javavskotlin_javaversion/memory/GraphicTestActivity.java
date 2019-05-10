@@ -1,18 +1,19 @@
 package com.jaszczurowskip.javavskotlin_javaversion.memory;
 
+import android.opengl.GLSurfaceView;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import com.jaszczurowskip.javavskotlin_javaversion.R;
 import com.michaelmuenzer.android.scrollablennumberpicker.ScrollableNumberPicker;
-import com.michaelmuenzer.android.scrollablennumberpicker.ScrollableNumberPickerListener;
 
 public class GraphicTestActivity extends AppCompatActivity {
 
     private myGlSurfaceView myGlView;
     private TextView tvFPS;
     private ScrollableNumberPicker npCubesAmountPicker;
+    private ScrollableNumberPicker npRotateSpeedPicker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,10 +22,11 @@ public class GraphicTestActivity extends AppCompatActivity {
         myGlView = findViewById(R.id.glView);
         tvFPS = findViewById(R.id.tvFps);
         npCubesAmountPicker = findViewById(R.id.npCubesAmount);
-        myGlView.setupView();
-        tvFPS.setText("66.3");
+        npRotateSpeedPicker = findViewById(R.id.npRotateSpeed);
+        myGlView.setupView(npCubesAmountPicker.getValue(), npRotateSpeedPicker.getValue());
+        tvFPS.setText(myGlView.getFramerate());
         npCubesAmountPicker.setListener(value -> {
-                //myGlView.changeAmountOfCubes(value);
+
         });
 
     }

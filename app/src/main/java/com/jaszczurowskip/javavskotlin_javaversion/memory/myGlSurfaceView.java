@@ -20,19 +20,19 @@ public class myGlSurfaceView extends GLSurfaceView {
         super(context, attrs);
     }
 
-    public void setupView() {
+    public void setupView(int cubesCount, int rotateSpeed) {
         super.setEGLConfigChooser(8, 8, 8, 8, 16, 0);
         this.myRender = new BouncyCubeRenderer();
-        myRender.setCubesCount(100);
+        myRender.setCubesCount(cubesCount, rotateSpeed/2);
         setRenderer(myRender);
         setRenderMode(GLSurfaceView.RENDERMODE_CONTINUOUSLY);
     }
 
-    public void changeAmountOfCubes(int value){
+
+    public void changeAmountOfCubes(int value, int rotateSpeed){
         // nie dziala
-        myRender.setCubesCount(value);
-        setRenderer(myRender);
-        setRenderMode(GLSurfaceView.RENDERMODE_CONTINUOUSLY);
+        setEGLContextClientVersion(2);
+        myRender.setCubesCount(value, rotateSpeed);
     }
 
     public String getFramerate(){

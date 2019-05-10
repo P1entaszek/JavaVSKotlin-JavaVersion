@@ -14,6 +14,8 @@ class BouncyCubeRenderer implements GLSurfaceView.Renderer {
 
     public static final float OBJ_SCALE = 0.3f;
     private float rowSize = 10;
+    private float columnSize = 10;
+    private int rotateSpeed;
     private Cube mCube;
     private float mAngle;
     private int cubesCount;
@@ -22,8 +24,10 @@ class BouncyCubeRenderer implements GLSurfaceView.Renderer {
     private int width;
     private int height;
 
-    public void setCubesCount(int cubesCount) {
+    public void setCubesCount(int cubesCount, int rotateSpeed) {
         this.cubesCount = cubesCount;
+        this.rotateSpeed = rotateSpeed;
+        rowSize = (float) Math.ceil(Math.sqrt(cubesCount));
 
     }
 
@@ -39,10 +43,11 @@ class BouncyCubeRenderer implements GLSurfaceView.Renderer {
         gl.glMatrixMode(GL11.GL_MODELVIEW);
         gl.glEnableClientState(GL11.GL_VERTEX_ARRAY);
         gl.glEnableClientState(GL11.GL_COLOR_ARRAY);
-        int cubesCounter = (int)(rowSize*rowSize);
+        //popracowac nad zmiana ilosci eleementow
+        int cubesCounter = cubesCount;
         gl.glLoadIdentity();
-        float scaleW = width / rowSize;
-        float scaleH = height / rowSize;
+        float scaleW = (float) ((width / (rowSize))*1);
+        float scaleH = (float) ((height / (rowSize))*1);
 //        gl.glTranslatef(-rowSizeW/2, -rowSizeH/2, -rowSizeW);
         gl.glTranslatef(scaleW/2, scaleH/2, -10);
         for (int x = 0; x < rowSize; x++) {
@@ -62,7 +67,7 @@ class BouncyCubeRenderer implements GLSurfaceView.Renderer {
         long currentTime = System.currentTimeMillis();
         long frameTime = currentTime - lastFrameTime;
         lastFrameTime = currentTime;
-        mAngle += 200.8f *(((frameTime /1000.f)));
+        mAngle += (20.8f *(((frameTime /1000.f)))) + rotateSpeed;
         fps = 1000.0f / ((float) frameTime);
         Log.e("fps", "" + fps);
     }
