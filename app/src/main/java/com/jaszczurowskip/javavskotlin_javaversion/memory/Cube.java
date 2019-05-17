@@ -85,7 +85,6 @@ class Cube
     }
     private FloatBuffer mFVertexBuffer;
     private ByteBuffer  mColorBuffer;
-    private ByteBuffer  mIndexBuffer;
     private ByteBuffer  mTfan1;
     private ByteBuffer  mTfan2;
 }

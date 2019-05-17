@@ -23,7 +23,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Amount of Cubes" />
+            android:text="@string/amount_of_cubes" />
 
         <TextView
             android:id="@+id/tvRotateSpeed"
@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Rotate speed" />
+            android:text="@string/rotate_speed" />
     </LinearLayout>
 
     <LinearLayout
@@ -48,26 +48,25 @@
             android:id="@+id/npCubesAmount"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:snp_maxValue="1000"
-            app:snp_minValue="25"
-            app:snp_stepSize="25"
-            app:snp_value="1000"
+            android:layout_weight="1"
+            app:snp_maxValue="10000"
+            app:snp_minValue="250"
+            app:snp_stepSize="250"
+            app:snp_value="250"
             app:snp_value_text_color="@color/colorPrimary"
-            app:snp_value_text_size="20sp"
-            android:layout_weight="1" />
+            app:snp_value_text_size="20sp" />
 
         <com.michaelmuenzer.android.scrollablennumberpicker.ScrollableNumberPicker
             android:id="@+id/npRotateSpeed"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             app:snp_maxValue="100"
             app:snp_minValue="5"
             app:snp_stepSize="5"
             app:snp_value="5"
             app:snp_value_text_color="@color/colorPrimary"
-            app:snp_value_text_size="20sp"
-            android:layout_weight="1" />
-
+            app:snp_value_text_size="20sp" />
 
     </LinearLayout>
 
@@ -90,7 +89,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:text="FPS performance:"
+        android:text="@string/fps_performance"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.352"
         app:layout_constraintStart_toStartOf="parent"
@@ -101,9 +100,9 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
-        android:text="200"
         app:layout_constraintBottom_toBottomOf="@+id/tvFpsPerformance"
         app:layout_constraintStart_toEndOf="@+id/tvFpsPerformance"
-        app:layout_constraintTop_toTopOf="@+id/tvFpsPerformance" />
+        app:layout_constraintTop_toTopOf="@+id/tvFpsPerformance"
+        tools:text="200" />
 
 </android.support.constraint.ConstraintLayout>

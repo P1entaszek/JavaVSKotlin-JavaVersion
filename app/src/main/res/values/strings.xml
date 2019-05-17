@@ -6,6 +6,18 @@
     <string name="choose_thread_mode">Choose thread mode</string>
     <string name="thread_mode">Thread mode</string>
     <string name="ms">ms</string>
+    <string name="rotate_speed">Rotate speed</string>
+    <string name="amount_of_cubes">Amount of Cubes</string>
+    <string name="fps_performance">FPS performance:</string>
+    <string name="fps_test">FPS Test</string>
+    <string name="thread_test">Thread Test</string>
+    <string name="about_application">About Application</string>
+    <string name="first_photo">First photo</string>
+    <string name="second_photo">Second photo</string>
+    <string name="third_photo">Third photo</string>
+    <string name="fourth_photo">Fourth photo</string>
+    <string name="start">Start</string>
+    <string name="all_average_time_consumed">All/Average time consumed</string>
     <string-array name="transformations_mode">
         <item>Transformations</item>
         <item>Inverse</item>
