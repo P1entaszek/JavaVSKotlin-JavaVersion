@@ -7,16 +7,16 @@ import android.util.AttributeSet;
 /**
  * Created by jaszczurowskip on 29.03.2019
  */
-public class myGlSurfaceView extends GLSurfaceView {
+public class MyGlSurfaceView extends GLSurfaceView {
 
     BouncyCubeRenderer myRender;
 
-    public myGlSurfaceView(Context context) {
+    public MyGlSurfaceView(Context context) {
         super(context);
 
     }
 
-    public myGlSurfaceView(Context context, AttributeSet attrs) {
+    public MyGlSurfaceView(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 

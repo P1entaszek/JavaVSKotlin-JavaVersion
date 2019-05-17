@@ -70,7 +70,7 @@
 
     </LinearLayout>
 
-    <com.jaszczurowskip.javavskotlin_javaversion.fps.myGlSurfaceView
+    <com.jaszczurowskip.javavskotlin_javaversion.fps.MyGlSurfaceView
         android:id="@+id/glView"
         android:layout_width="0dp"
         android:layout_height="0dp"

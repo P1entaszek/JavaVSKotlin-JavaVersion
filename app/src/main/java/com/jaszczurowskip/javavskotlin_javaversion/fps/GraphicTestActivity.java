@@ -10,7 +10,7 @@ import com.michaelmuenzer.android.scrollablennumberpicker.ScrollableNumberPicker
 
 public class GraphicTestActivity extends AppCompatActivity {
 
-    private myGlSurfaceView myGlView;
+    private MyGlSurfaceView myGlView;
     private TextView tvFPS;
     private ScrollableNumberPicker npCubesAmountPicker;
     private ScrollableNumberPicker npRotateSpeedPicker;
