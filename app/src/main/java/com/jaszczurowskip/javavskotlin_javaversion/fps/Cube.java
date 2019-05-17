@@ -1,4 +1,4 @@
-package com.jaszczurowskip.javavskotlin_javaversion.memory;
+package com.jaszczurowskip.javavskotlin_javaversion.fps;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;

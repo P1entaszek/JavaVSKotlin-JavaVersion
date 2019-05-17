@@ -1,4 +1,4 @@
-package com.jaszczurowskip.javavskotlin_javaversion.memory;
+package com.jaszczurowskip.javavskotlin_javaversion.fps;
 
 import android.content.Context;
 import android.opengl.GLSurfaceView;

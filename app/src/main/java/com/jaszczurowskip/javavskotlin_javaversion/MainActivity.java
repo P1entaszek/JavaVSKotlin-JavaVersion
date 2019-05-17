@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 
-import com.jaszczurowskip.javavskotlin_javaversion.memory.GraphicTestActivity;
+import com.jaszczurowskip.javavskotlin_javaversion.fps.GraphicTestActivity;
 
 public class MainActivity extends AppCompatActivity {
     private Button graphicTest;
@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        graphicTest = findViewById(R.id.memoryTest);
+        graphicTest = findViewById(R.id.fpsTest);
         threadTest = findViewById(R.id.bttnThreadTest);
         aboutApp = findViewById(R.id.bttnAboutApp);
         registerListeners();
