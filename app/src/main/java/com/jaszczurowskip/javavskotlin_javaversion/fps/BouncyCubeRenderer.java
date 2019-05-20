@@ -14,7 +14,6 @@ class BouncyCubeRenderer implements GLSurfaceView.Renderer {
 
     public static final float OBJ_SCALE = 0.3f;
     private float rowSize = 10;
-    private float columnSize = 10;
     private int rotateSpeed;
     private Cube mCube;
     private float mAngle;
@@ -43,25 +42,20 @@ class BouncyCubeRenderer implements GLSurfaceView.Renderer {
         gl.glMatrixMode(GL11.GL_MODELVIEW);
         gl.glEnableClientState(GL11.GL_VERTEX_ARRAY);
         gl.glEnableClientState(GL11.GL_COLOR_ARRAY);
-        //popracowac nad zmiana ilosci eleementow
-        int cubesCounter = cubesCount;
         gl.glLoadIdentity();
         float scaleW = (float) ((width / (rowSize))*1);
         float scaleH = (float) ((height / (rowSize))*1);
-//        gl.glTranslatef(-rowSizeW/2, -rowSizeH/2, -rowSizeW);
         gl.glTranslatef(scaleW/2, scaleH/2, -10);
         for (int x = 0; x < rowSize; x++) {
             for (int y = 0; y < rowSize; y++) {
 
                 gl.glPushMatrix();
                 gl.glTranslatef(x*scaleW, (float) y*scaleH, 0.1f);
-//            gl.glScalef(0.9f/rowSizeW, 0.9f/rowSizeH, 0.9f/rowSizeW);
                 gl.glRotatef(mAngle, 0.0f, 1.0f, 0.0f);
                 gl.glRotatef(mAngle, 1.0f, 0.0f, 0.0f);
                 gl.glScalef(scaleW* OBJ_SCALE, scaleW*OBJ_SCALE, scaleW*OBJ_SCALE);
                 mCube.draw(gl);
                 gl.glPopMatrix();
-                cubesCounter--;
             }
         }
         long currentTime = System.currentTimeMillis();
@@ -80,19 +74,9 @@ class BouncyCubeRenderer implements GLSurfaceView.Renderer {
         this.width = width;
         this.height = height;
         gl.glViewport(0, 0, width, height);
-        float aspectRatio;
-        float zNear = .1f;
-        float zFar = 1000;
-        float fieldOfView = 60.0f / 57.3f;
-        float size;
-
         gl.glEnable(GL10.GL_NORMALIZE);
-        aspectRatio = (float) width / (float) height;
         gl.glMatrixMode(GL10.GL_PROJECTION);
-        size = zNear * (float) (Math.tan((double) (fieldOfView / 2.0f)));
         gl.glOrthof(0.0f, width, height, 0.0f, -1.0f, 1000.0f);
-//        gl.glFrustumf(-size, size, -size / aspectRatio,
-//                size / aspectRatio, zNear, zFar);
         gl.glMatrixMode(GL10.GL_MODELVIEW);
     }
 
